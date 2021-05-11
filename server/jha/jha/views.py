@@ -9,8 +9,8 @@ from rest_framework.parsers import JSONParser
 def entry_all(request):
     if request.method == 'GET':    
         entries = Entry.objects.all()
-        serializers = EntrySerializer(entries, many=True)
-        return JsonResponse(serializers.data, safe=False)
+        serializer = EntrySerializer(entries, many=True)
+        return JsonResponse(serializer.data, safe=False)
     
     elif request.method == 'POST':
         data = JSONParser().parse(request)
