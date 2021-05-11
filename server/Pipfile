@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+Django = "3.1.7"
+djangorestframework = "3.12.4"
+django-ratelimit = "3.0.1"
+django-nose = "1.4.7"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
